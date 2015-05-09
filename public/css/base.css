@@ -1,0 +1,47 @@
+body {
+  background-color: #FAFAFA;
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+
+.welcome img {
+  max-width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(66%);
+  filter: grayscale(66%);
+  position: relative;
+}
+
+.welcome h1, form, .welcome_victory {
+  position: absolute;
+  left: 300px;
+}
+
+.welcome h1 {
+  width: 100%;
+  top: 170px;
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+}
+
+.welcome form {
+  top: 370px;
+}
+
+.welcome input {
+  width: 600px;
+  height: 30px;
+}
+
+.welcome_victory {
+  top: 440px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
