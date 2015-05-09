@@ -1,0 +1,12 @@
+Tag.create!(name: 'Personal')
+Tag.create!(name: 'Work')
+Tag.create!(name: 'Friends')
+Tag.create!(name: 'Family')
+Tag.create!(name: 'Motivation')
+Tag.create!(name: 'Love')
+Tag.create!(name: 'Life')
+Tag.create!(name: 'Holiday')
+Tag.create!(name: 'Willpower')
+Tag.create!(name: 'Religion')
+Tag.create!(name: 'Dream')
+
