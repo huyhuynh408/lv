@@ -1,3 +1,5 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :victories
+  has_many :taggings
+  has_many :tags, through: :taggings
 end
