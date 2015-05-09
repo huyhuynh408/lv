@@ -1,21 +1,23 @@
 <div class="welcome">
   <img src="/landing-pic.jpg" alt='inspiration' />
-  <h1>hi
-    <% if current_user != nil %>
-      <%= current_user.first_name %>!
-    <% end %>
-  </h1>
-  <form action="/users/victories/new" method="POST">
-    <input type="text" name="title" placeholder="enter your victory here.  hit enter to submit.">
-  </form>
-  <div class="welcome_victory"><%= @victory.title %>
-    <br>-
-    <% if current_user == nil %>
-      <span>
-        <%= @victory.user.first_name.first %> from <%= @victory.user.city %>,
-      </span>
-    <% end %>
-    <span><%= @victory.created_at.strftime("%B %d") %></span>
+  <div class="welcome_content">
+    <h1>hi
+      <% if current_user != nil %>
+        <%= current_user.first_name %>!
+      <% end %>
+    </h1>
+    <form action="/users/victories/new" method="POST">
+      <input type="text" name="title" placeholder="enter your victory here.  hit enter to submit.">
+    </form>
+    <div class="welcome_victory"><%= @victory.title %>
+      <br>-
+      <% if current_user == nil %>
+        <span>
+          <%= @victory.user.first_name.first %> from <%= @victory.user.city %>,
+        </span>
+      <% end %>
+      <span><%= @victory.created_at.strftime("%B %d") %></span>
+    </div>
   </div>
 </div>
 

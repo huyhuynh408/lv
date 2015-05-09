@@ -7,7 +7,7 @@ get '/' do
     user = User.find_by_id(current_user.id)
     victories = user.victories
     @victory = victories[rand(victories.length-2)]
-    @victory_random_three = [Victory.last, Victory.first, Victory.last]
+    @victory_random_three = victories.sample(3)
   end
   @victory_random_four = Victory.all.sample(4)
   erb :index
