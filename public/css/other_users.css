@@ -1,22 +1,39 @@
 .other_user_victories_newest {
   background-color: #F5F5F5;
   padding: 70px;
+  text-align: center;
 }
 
 .other_user_victories_newest .random_right, .random_left {
   padding: 30px 150px;
-  font-size: 40px;
+  font-size: 33px;
 }
 
 .other_user_victories_newest .random_right {
   text-align: right;
 }
 
+.other_user_victories_newest .random_left {
+  text-align: left;
+}
+
 .other_user_victories_newest span {
   display: block;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+.other_user_victories_newest .taggings {
+  background-color: #99CCFF;
+  font-size: 13px;
+  display: inline;
+  padding: 2px 5px;
 }
 
 .other_user_victories_newest a {
   clear: both;
+}
+
+.other_user_victories_newest .random_user_title {
+  font-size: 18px;
+  margin-bottom: 10px;
 }

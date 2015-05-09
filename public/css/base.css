@@ -1,5 +1,14 @@
 * {
   text-transform: lowercase;
+  color: #303030;
+}
+
+* a:link, a:visited {
+  text-decoration: none;
+}
+
+* a:hover {
+  color: #9cf;
 }
 
 body {
@@ -46,6 +55,7 @@ body {
 .welcome_victory span {
   top: 440px;
   font-size: 30px;
+  color: white;
 }
 
 .welcome_victory {
@@ -53,4 +63,8 @@ body {
   font-size: 40px;
   font-weight: bold;
   color: white;
+}
+
+footer {
+  height: 50px;
 }
