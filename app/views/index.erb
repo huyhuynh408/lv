@@ -10,8 +10,13 @@
 <div class="random_victories">
   <table>
     <tr>
-      <td>
-      </td>
+      <% @victory_random_three.each do |victory| %>
+        <td>
+          01
+          <%= victory.title %>
+          <%= victory.created_at %>
+        </td>
+      <% end %>
     </tr>
   </table>
 </div>

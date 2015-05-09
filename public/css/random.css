@@ -1,0 +1,12 @@
+.random_victories {
+  height: 300px;
+}
+
+.random_victories table {
+  width: 100%;
+  text-align: center;
+}
+
+.random_victories td {
+  width: 33%;
+}
