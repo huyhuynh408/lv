@@ -1,3 +1,8 @@
+User.create!(first_name: "Huy", last_name: "Huynh", username: "huy", email: "huy@aol.com", city: "san jose", state: "ca", password: "huy")
+User.create!(first_name: "John", last_name: "Dillion", username: "john", email: "john@aol.com", city: "austin", state: "tx", password: "john")
+User.create!(first_name: "Liz", last_name: "Carter", username: "liz", email: "liz@aol.com", city: "new york", state: "ny", password: "liz")
+User.create!(first_name: "Tina", last_name: "Lee", username: "tina", email: "tina@aol.com", city: "chicago", state: "il", password: "tina")
+
 Tag.create!(name: 'Personal')
 Tag.create!(name: 'Work')
 Tag.create!(name: 'Friends')
