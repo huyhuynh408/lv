@@ -1,12 +1,29 @@
 .random_victories {
-  height: 300px;
-}
-
-.random_victories table {
-  width: 100%;
   text-align: center;
+  padding: 70px;
 }
 
-.random_victories td {
+.random_victories div {
+  display: inline-block;
   width: 33%;
+  margin-bottom: 55px;
+}
+
+.random_victories span {
+  font-size: 8px;
+}
+
+.random_victories h3 {
+  margin-top: 20px;
+  padding-bottom: 15px;
+  font-size: 27px;
+  font-family: Garmond;
+}
+
+.random_victories p {
+  font-size: 20px;
+}
+
+.random_victories a {
+
 }

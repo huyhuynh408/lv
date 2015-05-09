@@ -1,22 +1,29 @@
 <div class="welcome">
   <img src="/landing-pic.jpg" alt='inspiration' />
   <h1>hi!</h1>
-  <form>
-    <input type="text" placeholder="enter your victory here.  hit enter to submit.">
+  <form action="/users/1/victories/new" method="POST">
+    <input type="text" name="title" placeholder="enter your victory here.  hit enter to submit.">
   </form>
   <div class="welcome_victory"><%= @victory.title.downcase %> <br>- <span><%= @victory.created_at.strftime("%B %d") %></span></div>
 </div>
 
 <div class="random_victories">
-  <table>
-    <tr>
-      <% @victory_random_three.each do |victory| %>
-        <td>
-          01
-          <%= victory.title %>
-          <%= victory.created_at %>
-        </td>
-      <% end %>
-    </tr>
-  </table>
+
+  <% @victory_random_three.each do |victory| %>
+    <div>
+        <span>01</span>
+        <h3><%= victory.created_at.strftime("%B %d") %></h3>
+        <p><%= victory.title %></p>
+
+    </div>
+  <% end %>
+
+  <a href="users/1/victories">See all you victories</a>
+</div>
+
+<div class="other_user_victories_newest">
+  <div><%= @victory.title %> aligned left, include first initial, city</div>
+  <div><%= @victory.title %> aligned right, include first initial, city</div>
+  <div><%= @victory.title %> aligned left, include first initial, city</div>
+  <a href="users/1/victories/all">See everyone's victories</a>
 </div>

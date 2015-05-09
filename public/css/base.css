@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  margin: 20px auto;
+  margin: 80px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
@@ -12,8 +12,8 @@ body {
 .welcome img {
   max-width: 100%;
   height: auto;
-  -webkit-filter: grayscale(66%);
-  filter: grayscale(66%);
+  -webkit-filter: grayscale(77%);
+  filter: grayscale(77%);
   position: relative;
 }
 
