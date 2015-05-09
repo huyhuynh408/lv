@@ -13,10 +13,9 @@
 </div>
 
 <div class="random_victories">
-
-  <% @victory_random_three.each do |victory| %>
+  <% @victory_random_three.each_with_index do |victory, index| %>
     <div>
-        <span>01</span>
+        <span>0<%= index + 1 %></span>
         <h3><%= victory.created_at.strftime("%B %d") %></h3>
         <p><%= victory.title %></p>
 

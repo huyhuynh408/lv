@@ -1,3 +1,7 @@
+* {
+  text-transform: lowercase;
+}
+
 body {
   background-color: #FAFAFA;
 }
