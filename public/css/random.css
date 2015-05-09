@@ -7,7 +7,11 @@
   display: inline-block;
   width: 33%;
   margin-bottom: 55px;
-  border-right: 1px solid black;
+  border-left: 1px solid #ccc;
+}
+
+.random_victories div:first-child {
+  border-left: 0;
 }
 
 .random_victories span {

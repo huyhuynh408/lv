@@ -27,6 +27,7 @@
   font-size: 13px;
   display: inline;
   padding: 2px 5px;
+  opacity: 0.3;
 }
 
 .other_user_victories_newest a {
