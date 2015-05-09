@@ -23,15 +23,19 @@
     <li>
       <a href="/">home</a>
     </li>
-    <li>
-      <a href="/users/login">login</a>
-    </li>
-    <li>
-      <a href="/users/signup">sign up</a>
-    </li>
-    <li>
-      <a href="/users/logout">logout</a>
-    </li>
+    <% if current_user == nil %>
+      <li>
+        <a href="/users/login">login</a>
+      </li>
+      <li>
+        <a href="/users/signup">sign up</a>
+      </li>
+    <% end %>
+    <% if current_user != nil %>
+      <li>
+        <a href="/users/logout">logout</a>
+      </li>
+    <% end %>
   </ul>
 </nav>
 <body>

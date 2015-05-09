@@ -1,0 +1,7 @@
+<% @tag.victories.each do |victory| %>
+  <div class="container">
+    <%= victory.title %> -
+    <%= victory.user.first_name[0] %>
+    <%= victory.created_at.strftime("%B %d") %>
+  </div>
+<% end %>

@@ -47,7 +47,7 @@
     </span>
     <% if @victory_random_four[0].tags %>
       <% @victory_random_four[0].tags.each do |tag| %>
-        <div class="taggings"><%= tag.name %></div>
+        <div class="taggings"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></div>
       <% end %>
     <% end %>
   </div>
@@ -59,7 +59,7 @@
     </span>
     <% if @victory_random_four[1].tags %>
       <% @victory_random_four[1].tags.each do |tag| %>
-        <div class="taggings"><%= tag.name %></div>
+        <div class="taggings"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></div>
       <% end %>
     <% end %>
   </div>
@@ -71,7 +71,7 @@
     </span>
     <% if @victory_random_four[2].tags %>
       <% @victory_random_four[2].tags.each do |tag| %>
-        <div class="taggings"><%= tag.name %></div>
+        <div class="taggings"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></div>
       <% end %>
     <% end %>
   </div>
@@ -83,7 +83,7 @@
     </span>
     <% if @victory_random_four[3].tags %>
       <% @victory_random_four[3].tags.each do |tag| %>
-        <div class="taggings"><%= tag.name %></div>
+        <div class="taggings"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></div>
       <% end %>
     <% end %>
   </div>

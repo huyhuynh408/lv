@@ -6,7 +6,7 @@ post '/users/login' do
   @user = User.find_by_username(params[:username])
 
   if @user.password == params[:password]
-    set_user(@user)
+    set_user_id(@user.id)
     redirect("/users/#{@user.id}")
   else
     redirect("/login")
@@ -22,8 +22,8 @@ post '/users/signup' do
   @user.password = params[:password]
 
   if @user.valid?
-    @user.save!
-    set_user(@user)
+    @user.save
+    set_user_id(@user.id)
     Victory.create(title: "i created a little victories account today", user_id: @user.id)
     redirect("/users/#{@user.id}")
   else
