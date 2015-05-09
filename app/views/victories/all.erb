@@ -1,0 +1,14 @@
+<% @victories.each do |victory| %>
+  <div class="container">
+  <%= victory.title %>
+    <span>
+    - <%= victory.user.first_name.first %> from <%= victory.user.city %>,
+    <%= victory.created_at.strftime("%B %d") %>
+  </span>
+  <% if victory.tags %>
+    <% victory.tags.each do |tag| %>
+      <div class="taggings"><%= tag.name %></div>
+    <% end %>
+  <% end %>
+  </div>
+<% end %>
