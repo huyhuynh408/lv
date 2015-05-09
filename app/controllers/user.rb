@@ -3,19 +3,36 @@ get '/users/login' do
 end
 
 post '/users/login' do
-  "Hello World"
+  @user = User.find_by_username(params[:username])
+
+  if @user.password == params[:password]
+    set_user(@user)
+    redirect("/users/#{@user.id}")
+  else
+    redirect("/login")
+  end
 end
 
 get '/users/signup' do
   erb :'users/signup'
 end
 
-post '/users/new' do
-  "Hello World"
+post '/users/signup' do
+  @user          = User.new(params[:user])
+  @user.password = params[:password]
+
+  if @user.valid?
+    @user.save!
+    set_user(@user)
+    redirect("/user/#{@user.id}")
+  else
+    redirect("/signup")
+  end
 end
 
 get '/users/logout' do
-  "Hello World"
+  clear_user
+  redirect('/')
 end
 
 get '/users/:id' do
