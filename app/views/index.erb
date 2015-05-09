@@ -1,7 +1,12 @@
 <div class="welcome">
   <img src="/landing-pic.jpg" alt='inspiration' />
-  <h1>hi!</h1>
-  <form action="/users/1/victories/new" method="POST">
+  <h1>hi
+    <% if current_user != nil %>
+      <%= current_user.first_name.downcase %>!
+    <% end %>
+
+  </h1>
+  <form action="/users/victories/new" method="POST">
     <input type="text" name="title" placeholder="enter your victory here.  hit enter to submit.">
   </form>
   <div class="welcome_victory"><%= @victory.title.downcase %> <br>- <span><%= @victory.created_at.strftime("%B %d") %></span></div>
@@ -18,7 +23,7 @@
     </div>
   <% end %>
 
-  <a href="users/1/victories">See all you victories</a>
+  <a href="users/<%= current_user.id %>/victories">See all you victories</a>
 </div>
 
 <div class="other_user_victories_newest">
