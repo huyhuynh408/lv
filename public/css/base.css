@@ -43,6 +43,11 @@ body {
   height: 30px;
 }
 
+.welcome_victory span {
+  top: 440px;
+  font-size: 30px;
+}
+
 .welcome_victory {
   top: 440px;
   font-size: 40px;

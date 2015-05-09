@@ -1,3 +1,22 @@
 .other_user_victories_newest {
-  background-color: #CCCCCC;
+  background-color: #F5F5F5;
+  padding: 70px;
+}
+
+.other_user_victories_newest .random_right, .random_left {
+  padding: 30px 150px;
+  font-size: 40px;
+}
+
+.other_user_victories_newest .random_right {
+  text-align: right;
+}
+
+.other_user_victories_newest span {
+  display: block;
+  font-size: 25px;
+}
+
+.other_user_victories_newest a {
+  clear: both;
 }

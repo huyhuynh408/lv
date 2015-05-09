@@ -24,7 +24,8 @@ post '/users/signup' do
   if @user.valid?
     @user.save!
     set_user(@user)
-    redirect("/user/#{@user.id}")
+    Victory.create(title: "i created a little victories account today", user_id: @user.id)
+    redirect("/users/#{@user.id}")
   else
     redirect("/signup")
   end
@@ -36,5 +37,6 @@ get '/users/logout' do
 end
 
 get '/users/:id' do
+  redirect('/')
   "can see stats of most victories per month, maybe a chart or graph? best day, etc"
 end
