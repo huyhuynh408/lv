@@ -38,11 +38,6 @@ body {
   color: white;
 }
 
-/*.welcome h1, form, .welcome_victory {
-  position: absolute;
-  left: 300px;
-}*/
-
 .welcome h1 {
   font-size: 100px;
   font-weight: bold;
@@ -74,7 +69,7 @@ button {
 }
 
 .welcome_victory {
-  /*top: 440px;*/
+  margin-top: 20px;
   font-size: 40px;
   font-weight: 600;
   color: white;
