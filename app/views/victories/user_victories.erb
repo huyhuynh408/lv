@@ -1,7 +1,10 @@
-Your small victories:
-
 <div class="container">
+  Your small victories:
   <% @victories.each do |victory| %>
-    <div class="individual_victories"><%= victory.title %><p><%= victory.created_at %></p></div>
+    <div class="individual_victories">
+      <%= victory.title %>
+      <p><%= victory.created_at %></p>
+      <p>number of upvotes: <%= victory.votes.size %></p>
+    </div>
   <% end %>
 </div>

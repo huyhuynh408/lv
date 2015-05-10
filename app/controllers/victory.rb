@@ -13,11 +13,17 @@ post '/users/victories/new' do
 end
 
 get '/users/victories/all' do
-  @victories = Victory.all[-10..-1].reverse
+  @victories = Victory.all[0..-1].reverse
   erb :'victories/all'
 end
 
+get '/users/victories/:id/vote' do
+  victory = Victory.find_by_id(params[:id])
+  victory.votes.create(count: 1)
+  redirect('/users/victories/all')
+end
+
 get '/users/:id/victories' do
-  @victories = current_user.victories
+  @victories = current_user.victories.reverse
   erb :'victories/user_victories'
 end

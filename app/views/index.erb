@@ -8,7 +8,9 @@
     </h1>
     <form action="/users/victories/new" method="POST">
       <input type="text" name="title" placeholder="enter your victory here.  hit enter to submit.">
+      <p>
     </form>
+    <div>click here to add a tag</div>
     <div class="welcome_victory"><%= @victory.title %>
       <br>-
       <% if current_user == nil %>
@@ -88,5 +90,5 @@
     <% end %>
   </div>
 
-  <a href="users/victories/all">See everyone's victories</a>
+  <a href="users/victories/all">See the latest victories</a>
 </div>
