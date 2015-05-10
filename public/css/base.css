@@ -1,6 +1,7 @@
 * {
   text-transform: lowercase;
   color: #303030;
+  font-family: 'Open Sans', sans-serif;
 }
 
 * a:link, a:visited {
@@ -44,7 +45,7 @@ body {
 }
 
 .welcome form {
-  top: 370px;
+  top: 380px;
 }
 
 .welcome input {
@@ -55,13 +56,14 @@ body {
 .welcome_victory span {
   top: 440px;
   font-size: 30px;
+  font-weight: normal;
   color: white;
 }
 
 .welcome_victory {
   top: 440px;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 600;
   color: white;
 }
 

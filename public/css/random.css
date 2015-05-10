@@ -15,15 +15,16 @@
 }
 
 .random_victories span {
-  font-size: 12px;
+  font-size: 15px;
   font-family: "Courier New", Courier, monospace;
 }
 
 .random_victories h3 {
   margin-top: 20px;
   padding-bottom: 15px;
-  font-size: 27px;
-  font-family: Garmond;
+  font-size: 30px;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
 }
 
 .random_victories p {
@@ -31,5 +32,31 @@
 }
 
 .random_victories a {
+  padding: 10px 0;
+  border-bottom: 2px solid #303030;
+}
 
+.random_victories a:hover {
+  padding: 10px 0;
+  border-top: 2px solid #9cf;
+  border-bottom: 0;
+}
+
+.see_all_link {
+  margin-top: 30px;
+}
+
+.see_all_link a {
+  padding: 10px 0;
+  border-bottom: 2px solid #303030;
+}
+
+.see_all_link a:hover {
+  padding: 10px 0;
+  border-top: 2px solid #9cf;
+  border-bottom: 0;
+}
+
+.random_user_title {
+  font-family: 'Crimson Text', serif;
 }
