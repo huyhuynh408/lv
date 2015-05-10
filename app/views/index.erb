@@ -7,10 +7,16 @@
       <% end %>
     </h1>
     <form action="/users/victories/new" method="POST">
-      <input type="text" name="title" placeholder="enter your victory here.  hit enter to submit.">
-      <p>
+      <input type="text" name="title" placeholder="enter your victory here">
+      <button type="submit">win</button>
+      <select name="tags">
+        <option>Please select a tag</option>
+        <% @tags.each do |tag| %>
+          <option><%= tag.name %></option>
+        <% end %>
+      </select>
     </form>
-    <div>click here to add a tag</div>
+    <div class="add_tag_button">click here to add a tag</div>
     <div class="welcome_victory"><%= @victory.title %>
       <br>-
       <% if current_user == nil %>

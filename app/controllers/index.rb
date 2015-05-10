@@ -1,4 +1,6 @@
 get '/' do
+  @tags = Tag.all
+
   if current_user == nil
     length = Victory.all.length
     @victory = Victory.find_by_id(rand(length-2))
