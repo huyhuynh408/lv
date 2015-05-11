@@ -6,14 +6,14 @@ $(document).ready(function(){
     var request = $.ajax({
       url: $(this).attr('action'),
       method: 'POST',
-      data: title_value
+      data: $(this).serialize()
     });
 
     request.done(function(response){
       $('select').hide();
       $('.add_tag_button').show();
       $('.welcome_victory').remove();
-      $(response).hide().appendTo('.welcome_content').slideToggle("slow");
+      $(response).hide().appendTo('.welcome_content').fadeIn(3000);
       title.val('');
     });
   });
@@ -24,5 +24,6 @@ $(document).ready(function(){
   $('.add_tag_button').click(function(){
     $('select').show();
     $('.add_tag_button').hide();
+    $("option[value='please_select']").replaceWith("<option value='please_select' selected='selected'>Please select a tag</option>")
   });
 });
