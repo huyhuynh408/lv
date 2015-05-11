@@ -22,7 +22,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('select').hide();
   $('.add_tag_button').click(function(){
-    $('select').show();
+    $('select').slideDown();
     $('.add_tag_button').hide();
     $("option[value='please_select']").replaceWith("<option value='please_select' selected='selected'>Please select a tag</option>")
   });

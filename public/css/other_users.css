@@ -40,6 +40,8 @@
 }
 
 .other_user_victories_newest .random_user_title {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-family: 'Crimson Text', serif;
+  padding-bottom: 50px;
 }
+
