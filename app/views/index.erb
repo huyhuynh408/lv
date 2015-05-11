@@ -30,19 +30,22 @@
 </div>
 
 <div class="random_victories">
-  <% @victory_random_three.each_with_index do |victory, index| %>
-    <div>
-        <span>0<%= index + 1 %></span>
-        <h3><%= victory.created_at.strftime("%B %d") %></h3>
-        <p><%= victory.title %></p>
-    </div>
-  <% end %>
+  <table>
+    <tr>
+    <% @victory_random_three.each_with_index do |victory, index| %>
+      <td>
+          <span>0<%= index + 1 %></span>
+          <h3><%= victory.created_at.strftime("%B %d") %></h3>
+          <p><%= victory.title %></p>
+      </td>
+    <% end %>
+    </tr>
+  </table>
   <% if current_user != nil %>
     <a href="/users/<%= current_user.id %>/victories">See all you victories</a>
   <% else %>
     <a href="/users/login">See all you victories</a>
   <% end %>
-
 </div>
 
 <div class="other_user_victories_newest">

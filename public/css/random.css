@@ -3,14 +3,25 @@
   padding: 70px;
 }
 
-.random_victories div {
+/*.random_victories div {
   display: inline-block;
   width: 33%;
   margin-bottom: 55px;
   border-left: 1px solid #ccc;
 }
+*/
 
-.random_victories div:first-child {
+.random_victories table {
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+.random_victories td {
+  width: 33%;
+  border-left: 1px solid #ccc;
+}
+
+.random_victories td:first-child {
   border-left: 0;
 }
 
