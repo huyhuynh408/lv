@@ -33,6 +33,7 @@ body {
 
 .welcome_content {
   position: absolute;
+  width: 700px;
   left: 20%;
   top: 17%;
   color: white;

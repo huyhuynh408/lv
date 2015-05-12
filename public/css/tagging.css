@@ -24,3 +24,11 @@
   opacity: 0.4;
   text-align: center;
 }
+
+.tagging_links span:hover {
+  opacity: 0.6;
+}
+
+.tagging_links a:hover {
+  color: black;
+}

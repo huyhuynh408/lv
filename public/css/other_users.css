@@ -30,9 +30,12 @@
   opacity: 0.4;
 }
 
+.other_user_victories_newest .taggings:hover {
+  opacity: 0.6;
+}
+
 .other_user_victories_newest .taggings a:hover {
   color: black;
-
 }
 
 .other_user_victories_newest a {

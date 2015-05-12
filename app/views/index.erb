@@ -52,7 +52,11 @@
   <p>tags</p>
   <div>
     <% @tags.each do |tag| %>
-      <span><%= tag.name %></span>
+      <span>
+        <a href="/tags/<%= tag.id %>">
+          <%= tag.name %>
+        </a>
+      </span>
     <% end %>
   </div>
 
