@@ -48,6 +48,13 @@
   <% end %>
 </div>
 
+<div class="tagging_links">
+  <p>tags</p>
+  <% @tags.each do |tag| %>
+    <span><%= tag.name %></span>
+  <% end %>
+</div>
+
 <div class="other_user_victories_newest">
   <span class="random_user_title">other user's victories</span>
   <div class="random_left">

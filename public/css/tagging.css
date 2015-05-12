@@ -1,0 +1,13 @@
+.tagging_links {
+  background-color: #EBF5FF;
+  text-align: center;
+  padding: 50px 0 70px 0;
+}
+
+.tagging_links p {
+  margin-bottom: 60px;
+}
+
+.tagging_links span {
+  padding: 8px 10px;
+}
