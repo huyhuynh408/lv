@@ -13,7 +13,7 @@ $(document).ready(function(){
       $('select').hide();
       $('.add_tag_button').show();
       $('.welcome_victory').remove();
-      $(response).hide().appendTo('.welcome_content').fadeIn(3000);
+      $(response).hide().appendTo('.welcome_content').fadeIn("slow");
       title.val('');
     });
   });

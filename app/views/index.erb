@@ -50,9 +50,12 @@
 
 <div class="tagging_links">
   <p>tags</p>
-  <% @tags.each do |tag| %>
-    <span><%= tag.name %></span>
-  <% end %>
+  <div>
+    <% @tags.each do |tag| %>
+      <span><%= tag.name %></span>
+    <% end %>
+  </div>
+
 </div>
 
 <div class="other_user_victories_newest">

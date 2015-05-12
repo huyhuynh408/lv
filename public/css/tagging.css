@@ -1,13 +1,26 @@
 .tagging_links {
-  background-color: #EBF5FF;
+  background-color: white;
   text-align: center;
   padding: 50px 0 70px 0;
 }
 
+.tagging_links div {
+  width: 60%;
+  margin: 0 auto;
+}
+
 .tagging_links p {
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
   margin-bottom: 60px;
 }
 
 .tagging_links span {
+  margin : 15px 10px;
+  width: 80px;
   padding: 8px 10px;
+  background-color: #99CCFF;
+  display: inline-block;
+  opacity: 0.4;
+  text-align: center;
 }
