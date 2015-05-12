@@ -1,23 +1,34 @@
 <div class="welcome">
   <img src="/landing-pic.jpg" alt='inspiration' />
+
   <div class="welcome_content">
     <h1>hi
       <% if current_user != nil %>
         <%= current_user.first_name %>!
       <% end %>
     </h1>
+
     <form action="/users/victories/new" method="POST">
       <input type="text" name="title" placeholder="enter your victory here">
       <button type="submit">win</button>
       <select name="tags">
-        <option>Please select a tag</option>
+        <option>
+          Please select a tag
+        </option>
         <% @tags.each do |tag| %>
-          <option><%= tag.name %></option>
+          <option>
+            <%= tag.name %>
+          </option>
         <% end %>
       </select>
     </form>
-    <div class="add_tag_button">click here to add a tag</div>
-    <div class="welcome_victory"><%= @victory.title %>
+
+    <div class="add_tag_button">
+      click here to add a tag
+    </div>
+
+    <div class="welcome_victory">
+      <%= @victory.title %>
       <br>-
       <% if current_user == nil %>
         <span>
@@ -34,17 +45,28 @@
     <tr>
     <% @victory_random_three.each_with_index do |victory, index| %>
       <td>
-          <span>0<%= index + 1 %></span>
-          <h3><%= victory.created_at.strftime("%B %d") %></h3>
-          <p><%= victory.title %></p>
+        <span>
+          0<%= index + 1 %>
+        </span>
+        <h3>
+          <%= victory.created_at.strftime("%B %d") %>
+        </h3>
+        <p>
+          <%= victory.title %>
+        </p>
       </td>
     <% end %>
     </tr>
   </table>
+
   <% if current_user != nil %>
-    <a href="/users/<%= current_user.id %>/victories">See all you victories</a>
+    <a href="/users/<%= current_user.id %>/victories">
+      See all you victories
+    </a>
   <% else %>
-    <a href="/users/login">See all you victories</a>
+    <a href="/users/login">
+      See all you victories
+    </a>
   <% end %>
 </div>
 
@@ -59,61 +81,35 @@
       </span>
     <% end %>
   </div>
-
 </div>
 
 <div class="other_user_victories_newest">
-  <span class="random_user_title">other user's victories</span>
-  <div class="random_left">
-    <%= @victory_random_four[0].title %>
-    <span>
-      - <%= @victory_random_four[0].user.first_name.first %> from <%= @victory_random_four[0].user.city %>,
-      <%= @victory_random_four[0].created_at.strftime("%B %d") %>
-    </span>
-    <% if @victory_random_four[0].tags %>
-      <% @victory_random_four[0].tags.each do |tag| %>
-        <div class="taggings"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></div>
-      <% end %>
-    <% end %>
-  </div>
-  <div class="random_right">
-    <%= @victory_random_four[1].title %>
-    <span>
-      - <%= @victory_random_four[1].user.first_name.first %> from <%= @victory_random_four[1].user.city %>,
-      <%= @victory_random_four[1].created_at.strftime("%B %d") %>
-    </span>
-    <% if @victory_random_four[1].tags %>
-      <% @victory_random_four[1].tags.each do |tag| %>
-        <div class="taggings"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></div>
-      <% end %>
-    <% end %>
-  </div>
-  <div class="random_left">
-    <%= @victory_random_four[2].title %>
-    <span>
-      - <%= @victory_random_four[2].user.first_name.first %> from <%= @victory_random_four[2].user.city %>,
-      <%= @victory_random_four[2].created_at.strftime("%B %d") %>
-    </span>
-    <% if @victory_random_four[2].tags %>
-      <% @victory_random_four[2].tags.each do |tag| %>
-        <div class="taggings"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></div>
-      <% end %>
-    <% end %>
-  </div>
-  <div class="random_right">
-    <%= @victory_random_four[3].title %>
-    <span>
-      - <%= @victory_random_four[3].user.first_name.first %> from <%= @victory_random_four[3].user.city %>,
-      <%= @victory_random_four[3].created_at.strftime("%B %d") %>
-    </span>
-    <% if @victory_random_four[3].tags %>
-      <% @victory_random_four[3].tags.each do |tag| %>
-        <div class="taggings"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></div>
-      <% end %>
-    <% end %>
-  </div>
-  <div class="see_all_link">
-    <a href="users/victories/all" >See the latest victories</a>
-  </div>
+  <span class="random_user_title">
+    other user's victories
+  </span>
 
+  <% @victory_random_four.each do |victory| %>
+    <div class="user_victories">
+      <%= victory.title %>
+      <span>
+        - <%= victory.user.first_name.first %> from <%= victory.user.city %>,
+        <%= victory.created_at.strftime("%B %d") %>
+      </span>
+      <% if victory.tags %>
+        <% victory.tags.each do |tag| %>
+          <div class="taggings">
+            <a href="/tags/<%= tag.id %>">
+              <%= tag.name %>
+            </a>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="see_all_link">
+    <a href="users/victories/all" >
+      See the latest victories
+    </a>
+  </div>
 </div>
