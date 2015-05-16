@@ -4,16 +4,18 @@
   text-align: center;
 }
 
-.other_user_victories_newest .random_right, .random_left {
+.other_user_victories_newest .user_victories {
   padding: 30px 150px;
   font-size: 33px;
 }
 
-.other_user_victories_newest .random_right {
+.other_user_victories_newest .user_victories:nth-child(3),
+.user_victories:nth-child(5) {
   text-align: right;
 }
 
-.other_user_victories_newest .random_left {
+.other_user_victories_newest .user_victories:nth-child(2),
+.user_victories:nth-child(4) {
   text-align: left;
 }
 
@@ -30,9 +32,12 @@
   opacity: 0.4;
 }
 
+.other_user_victories_newest .taggings:hover {
+  opacity: 0.6;
+}
+
 .other_user_victories_newest .taggings a:hover {
   color: black;
-
 }
 
 .other_user_victories_newest a {

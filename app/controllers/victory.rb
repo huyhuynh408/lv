@@ -1,5 +1,6 @@
 post '/users/victories/new' do
   if request.xhr?
+    p params[:tags]
     victory = Victory.create(title: params[:title], user_id: current_user.id)
     if params[:tags] != "Please select a tag"
       tag = Tag.find_by_name(params[:tags])
