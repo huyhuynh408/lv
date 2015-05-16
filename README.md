@@ -1,6 +1,6 @@
 # little victories
 
-Personal project in worked on over the weekend of Week 5 DBC with Sinatra.
+Personal project worked on over the weekend of Week 5 DBC with Sinatra.
 
 ## Description
 
