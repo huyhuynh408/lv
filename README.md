@@ -17,7 +17,6 @@ You can also browse through random victories of anonymous users and share in the
 * JavaScript hide/show of additional tagging options
 * Allows upvoting of victories
 * Sorting by tags
-* Anonymous users, only first name initial and city is displayed
 
 ## Design
 
