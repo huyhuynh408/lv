@@ -17,10 +17,13 @@ body {
 }
 
 .container {
-  margin: 80px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  padding: 20px;
+  background-color: white;
+}
+
+.main-body {
+  margin: 2em auto;
+  width: 800px;
 }
 
 .welcome img {

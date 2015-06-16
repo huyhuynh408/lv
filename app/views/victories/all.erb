@@ -1,15 +1,18 @@
-<% @victories.each do |victory| %>
-  <div class="container">
-  <%= victory.title %>
-    <span>
-    - <%= victory.user.first_name.first %> from <%= victory.user.city %>,
-    <%= victory.created_at.strftime("%B %d") %>
-  </span>
-  <% if victory.tags %>
-    <% victory.tags.each do |tag| %>
-      <div class="taggings"><%= tag.name %></div>
+<div class="main-body">
+  <h1>Most recent victories</h1>
+  <% @victories.each do |victory| %>
+    <div class="container">
+    <%= victory.title %>
+      <span>
+      - <%= victory.user.first_name.first %> from <%= victory.user.city %>,
+      <%= victory.created_at.strftime("%B %d") %>
+    </span>
+    <% if victory.tags %>
+      <% victory.tags.each do |tag| %>
+        <div class="taggings"><%= tag.name %></div>
+      <% end %>
     <% end %>
+    <p><a href="/users/victories/<%= victory.id %>/vote">like this victory</a></p>
+    </div>
   <% end %>
-  <p><a href="/users/victories/<%= victory.id %>/vote">like this victory</a></p>
-  </div>
-<% end %>
+</div>

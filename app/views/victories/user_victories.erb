@@ -1,16 +1,17 @@
-Your small victories:
-<% @victories.each do |victory| %>
-  <div class="container">
-    <div class="individual_victories">
-      <%= victory.title %>
-      <p><%= victory.created_at %></p>
-      <% if victory.tags.length > 0 %>
-        <% victory.tags.each do |tag| %>
-          <p>#<%= tag.name %></p>
+<div class="main-body">
+  <h1>Your small victories</h1>
+  <% @victories.each do |victory| %>
+    <div class="container">
+      <div class="individual_victories">
+        <%= victory.title %>
+        <p><%= victory.created_at.strftime("%B %d") %></p>
+        <% if victory.tags.length > 0 %>
+          <% victory.tags.each do |tag| %>
+            <p><a href="/tags/<%= tag.id %>">#<%= tag.name %></a></p>
+          <% end %>
         <% end %>
-      <% end %>
-      <p>number of upvotes: <%= victory.votes.size %></p>
+        <p>number of upvotes: <%= victory.votes.size %></p>
+      </div>
     </div>
-  </div>
-<% end %>
-
+  <% end %>
+</div>

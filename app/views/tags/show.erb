@@ -1,7 +1,12 @@
-<% @tag.victories.each do |victory| %>
-  <div class="container">
-    <%= victory.title %> -
-    <%= victory.user.first_name[0] %>
-    <%= victory.created_at.strftime("%B %d") %>
-  </div>
-<% end %>
+<div class="main-body">
+  <h1><%= @tag.name %> tags</h1>
+  <% @tag.victories.each do |victory| %>
+    <div class="container">
+      <p><%= victory.title %></p>
+      <p>
+        <%= victory.user.first_name[0] %>
+        - <%= victory.created_at.strftime("%B %d") %>
+      </p>
+    </div>
+  <% end %>
+</div>
