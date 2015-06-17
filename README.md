@@ -2,6 +2,8 @@
 
 Personal project worked on over the weekend of Week 5 DBC with Sinatra.
 
+[See a demo](http://littlevictories.herokuapp.com/)
+
 ## Description
 
 There are little moments in life where we celebrate our little victories.  Whether big or small, they are easily forgotten in the busy world we live in.  It would be nice to sit down at the end of the year and reflect on all of the little victories we accomplished but it is so hard to remember everything that has happened.  With little victories, you will be able to write down those precious moments and look at them all at a later time.
